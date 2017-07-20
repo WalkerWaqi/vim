@@ -25,11 +25,11 @@ Plugin 'taglist.vim'
 Plugin 'gdbmgr'
 
 Plugin 'terryma/vim-multiple-cursors'
-" let g:multi_cursor_next_key='<C-n>'
-" let g:multi_cursor_prev_key='<C-p>'
-" let g:multi_cursor_skip_key='<C-x>'
-" let g:multi_cursor_quit_key='<Esc>'
-" let g:multi_cursor_start_key='<F6>'
+let g:multi_cursor_next_key='<C-n>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
+let g:multi_cursor_start_key='<F6>'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
