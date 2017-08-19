@@ -57,7 +57,7 @@ flags = [
     '.', 
     '-isystem', 
     '/usr/include/', 
-    '/usr/local/include/',
+    '/usr/local/include/', 
 ]
 
 
