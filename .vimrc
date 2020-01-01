@@ -17,6 +17,8 @@ Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 
+Plugin 'majutsushi/tagbar'
+
 " Plugin 'vim-ctrlspace/vim-ctrlspace'
 
 " Plugin 'terryma/vim-multiple-cursors'
@@ -50,3 +52,5 @@ colorscheme solarized
 let g:solarized_termcolors=256
 syntax enable
 syntax on
+
+nmap <F8> :TagbarToggle<CR>
