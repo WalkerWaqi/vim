@@ -5,6 +5,7 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.fzf
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -23,7 +24,7 @@ Plugin 'majutsushi/tagbar'
 
 Plugin 'preservim/nerdcommenter'
 
-" Plugin 'vim-ctrlspace/vim-ctrlspace'
+Plugin 'junegunn/fzf.vim'
 
 " Plugin 'terryma/vim-multiple-cursors'
 
@@ -60,3 +61,7 @@ syntax on
 nmap <F8> :TagbarToggle<CR>
 
 let g:NERDSpaceDelims = 1
+
+nmap <C-p> :Files<CR>
+nmap <C-e> :Buffers<CR>
+let g:fzf_action = { 'ctrl-e': 'edit' }
