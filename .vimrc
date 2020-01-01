@@ -1,3 +1,5 @@
+let mapleader=";"
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -18,6 +20,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'majutsushi/tagbar'
+
+Plugin 'preservim/nerdcommenter'
 
 " Plugin 'vim-ctrlspace/vim-ctrlspace'
 
@@ -54,3 +58,5 @@ syntax enable
 syntax on
 
 nmap <F8> :TagbarToggle<CR>
+
+let g:NERDSpaceDelims = 1
