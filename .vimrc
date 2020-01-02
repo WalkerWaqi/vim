@@ -25,7 +25,9 @@ Plugin 'preservim/nerdcommenter'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 
-" Plugin 'terryma/vim-multiple-cursors'
+Plugin 'Lokaltog/vim-easymotion'
+
+Plugin 'terryma/vim-multiple-cursors'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -49,8 +51,8 @@ set ignorecase
 set wildmenu
 set number
 set hlsearch
-set cursorline
-set cursorcolumn
+" set cursorline
+" set cursorcolumn
 set nowrap
 nmap <Leader>q :q<CR>
 nmap <Leader>w :w<CR>
@@ -107,3 +109,7 @@ command! -bang -nargs=* Rg
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
+
+" Lokaltog/vim-easymotion
+nmap <Leader>s <Plug>(easymotion-s2)
+map  <Leader>/ <Plug>(easymotion-sn)
