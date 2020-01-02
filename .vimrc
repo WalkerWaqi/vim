@@ -29,6 +29,8 @@ Plugin 'Lokaltog/vim-easymotion'
 
 Plugin 'terryma/vim-multiple-cursors'
 
+Plugin 'ycm-core/YouCompleteMe'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -50,7 +52,7 @@ set incsearch
 set ignorecase
 set wildmenu
 set number
-set hlsearch
+" set hlsearch
 " set cursorline
 " set cursorcolumn
 set nowrap
