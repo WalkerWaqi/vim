@@ -1,5 +1,3 @@
-let mapleader=";"
-
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -44,8 +42,23 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+let mapleader=";"
 set hidden
+set incsearch
+set ignorecase
+set wildmenu
+set number
+set hlsearch
+set cursorline
+set cursorcolumn
+set nowrap
+nmap <Leader>q :q<CR>
+nmap <Leader>w :w<CR>
+nmap <Leader>WQ :wa<CR>:q<CR>
+nmap <Leader>Q :qa!<CR>
+nmap <Leader>M %
 
+" vim-airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='papercolor'
@@ -53,16 +66,24 @@ nnoremap <C-N> :bn<CR>
 nnoremap <C-P> :bp<CR>
 set laststatus=2
 
+" vim-colors-solarized
 set background=light
 colorscheme solarized
 let g:solarized_termcolors=256
 syntax enable
 syntax on
 
+" ctrlp.vim
+let g:ctrlp_map = ''
+nmap <Leader>p :CtrlP<CR>
+
+" tagbar
 nmap <F8> :TagbarToggle<CR>
 
+" nerdcommenter
 let g:NERDSpaceDelims = 1
 
+" fzf
 nmap <C-p> :Files<CR>
 nmap <C-e> :Buffers<CR>
 let g:fzf_action = { 'ctrl-e': 'edit' }
@@ -80,3 +101,9 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
