@@ -34,6 +34,10 @@ Plugin 'Lokaltog/vim-easymotion'
 
 Plugin 'terryma/vim-multiple-cursors'
 
+Plugin 'godlygeek/tabular'
+
+Plugin 'tpope/vim-fugitive'
+
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
 Plugin 'ycm-core/YouCompleteMe'
