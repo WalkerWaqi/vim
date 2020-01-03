@@ -146,9 +146,9 @@ map  <Leader>/ <Plug>(easymotion-sn)
 let g:ycm_python_binary_path = '/usr/bin/python3'
 " C family Completion Path
 let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
-nnoremap <c-k> :YcmCompleter GoToDeclaration<CR>|
-nnoremap <c-h> :YcmCompleter GoToDefinition<CR>|
-nnoremap <c-j> :YcmCompleter GoToDefinitionElseDeclaration<CR>|
+nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 set completeopt-=preview
 let g:ycm_cache_omnifunc=0
 let g:ycm_confirm_extra_conf = 0
