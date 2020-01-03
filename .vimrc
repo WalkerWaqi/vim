@@ -21,6 +21,9 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'majutsushi/tagbar'
+Plugin 'vim-scripts/indexer.tar.gz'
+Plugin 'vim-scripts/DfrankUtil'
+Plugin 'vim-scripts/vimprj'
 
 Plugin 'preservim/nerdcommenter'
 
@@ -31,7 +34,9 @@ Plugin 'Lokaltog/vim-easymotion'
 
 Plugin 'terryma/vim-multiple-cursors'
 
-" Plugin 'ycm-core/YouCompleteMe'
+Plugin 'octol/vim-cpp-enhanced-highlight'
+
+Plugin 'ycm-core/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -96,6 +101,7 @@ nmap <Leader>p :CtrlP<CR>
 
 " tagbar
 nmap <F8> :TagbarToggle<CR>
+let g:indexer_ctagsCommandLineOptions="--c++-kinds=+p+l+x+c+d+e+f+g+m+n+s+t+u+v --fields=+iaSl --extra=+q"
 
 " nerdcommenter
 let g:NERDSpaceDelims = 1
@@ -128,3 +134,26 @@ command! -bang -nargs=* Rg
 " Lokaltog/vim-easymotion
 nmap <Leader>s <Plug>(easymotion-s2)
 map  <Leader>/ <Plug>(easymotion-sn)
+
+" YouCompleteMe
+" Python Semantic Completion
+let g:ycm_python_binary_path = '/usr/bin/python3'
+" C family Completion Path
+let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
+nnoremap <c-k> :YcmCompleter GoToDeclaration<CR>|
+nnoremap <c-h> :YcmCompleter GoToDefinition<CR>|
+nnoremap <c-j> :YcmCompleter GoToDefinitionElseDeclaration<CR>|
+set completeopt-=preview
+let g:ycm_cache_omnifunc=0
+let g:ycm_confirm_extra_conf = 0
+let g:disable_protodef_sorting=1
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_min_num_of_chars_for_completion=2
+let g:ycm_complete_in_comments = 1
+let g:ycm_complete_in_strings = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+" let g:ycm_key_invoke_completion = ['<C-Space>']
+" let g:ycm_key_list_stop_completion = ['<C-y>']
