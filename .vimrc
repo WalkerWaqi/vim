@@ -26,6 +26,7 @@ Plugin 'vim-scripts/DfrankUtil'
 Plugin 'vim-scripts/vimprj'
 
 Plugin 'preservim/nerdcommenter'
+Plugin 'preservim/nerdtree'
 
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
@@ -109,6 +110,7 @@ let g:indexer_ctagsCommandLineOptions="--c++-kinds=+p+l+x+c+d+e+f+g+m+n+s+t+u+v 
 
 " nerdcommenter
 let g:NERDSpaceDelims = 1
+map <f2> :NERDTreeToggle<cr>
 
 " fzf
 nmap <C-p> :Files<CR>
