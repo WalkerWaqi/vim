@@ -16,6 +16,8 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'altercation/vim-colors-solarized'
 
+Plugin 'nathanaelkane/vim-indent-guides'
+
 Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'majutsushi/tagbar'
@@ -29,7 +31,7 @@ Plugin 'Lokaltog/vim-easymotion'
 
 Plugin 'terryma/vim-multiple-cursors'
 
-Plugin 'ycm-core/YouCompleteMe'
+" Plugin 'ycm-core/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -55,7 +57,10 @@ set number
 " set hlsearch
 " set cursorline
 " set cursorcolumn
+set ruler
+set laststatus=2
 set nowrap
+filetype indent on
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -71,7 +76,6 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='papercolor'
 nnoremap <C-B> :bn<CR>
-set laststatus=2
 
 " vim-colors-solarized
 set background=light
@@ -79,6 +83,12 @@ colorscheme solarized
 let g:solarized_termcolors=256
 syntax enable
 syntax on
+
+" vim-indent-guides
+let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_start_level=2
+let g:indent_guides_guide_size=1
+nmap <silent> <Leader>i <Plug>IndentGuidesToggle
 
 " ctrlp.vim
 let g:ctrlp_map = ''
