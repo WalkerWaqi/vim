@@ -89,6 +89,7 @@ let g:airline_theme='papercolor'
 nnoremap <C-L> :bn<CR>
 
 " vim-colors-solarized
+set t_Co=256
 set background=light
 colorscheme PaperColor
 let g:solarized_termcolors=256
