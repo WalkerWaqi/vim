@@ -39,8 +39,11 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'godlygeek/tabular'
 
 Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 
 Plugin 'octol/vim-cpp-enhanced-highlight'
+
+Plugin 'jiangmiao/auto-pairs'
 
 Plugin 'ycm-core/YouCompleteMe'
 
