@@ -29,6 +29,8 @@ Plugin 'vim-scripts/vimprj'
 Plugin 'preservim/nerdcommenter'
 Plugin 'preservim/nerdtree'
 
+Plugin 'mileszs/ack.vim'
+
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 
