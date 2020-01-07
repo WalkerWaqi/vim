@@ -124,7 +124,7 @@ nmap <C-p> :Files<CR>
 nmap <C-e> :Buffers<CR>
 let g:fzf_action = { 'ctrl-e': 'edit' }
 let g:fzf_colors =
-  \ { 'fg':      ['fg', 'Normal'],
+\ { 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
   \ 'hl':      ['fg', 'Comment'],
   \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
