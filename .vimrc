@@ -16,6 +16,7 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'rakr/vim-one'
 
 Plugin 'nathanaelkane/vim-indent-guides'
 
@@ -96,7 +97,7 @@ nnoremap <C-L> :bn<CR>
 " vim-colors-solarized
 set t_Co=256
 set background=dark
-colorscheme PaperColor
+colorscheme one
 let g:solarized_termcolors=256
 syntax enable
 syntax on
