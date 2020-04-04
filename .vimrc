@@ -48,7 +48,7 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 
 Plugin 'jiangmiao/auto-pairs'
 
-Plugin 'ycm-core/YouCompleteMe'
+" Plugin 'ycm-core/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -93,6 +93,9 @@ if has('win32')
   set guifont=Ubuntu_Mono_derivative_Powerlin:h11:cANSI:qDRAFT
   let g:airline_powerline_fonts = 0
 else
+  if has('gui_macvim')
+    set guifont=UbuntuMonoDerivativePowerline-Regular:h12
+  endif
   let g:airline_powerline_fonts = 1
 endif
 let g:airline#extensions#tabline#enabled = 1
