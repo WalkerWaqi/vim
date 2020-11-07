@@ -90,11 +90,11 @@ nmap <Leader>M %
 
 " vim-airline
 if has('win32')
-  set guifont=Ubuntu_Mono_derivative_Powerlin:h11:cANSI:qDRAFT
+  set guifont=Fira_Code:h10:cANSI:qDRAFT
   let g:airline_powerline_fonts = 0
 else
   if has('gui_macvim')
-    set guifont=UbuntuMonoDerivativePowerline-Regular:h12
+    set guifont=FiraCode-Retina:h12
   endif
   let g:airline_powerline_fonts = 1
 endif
